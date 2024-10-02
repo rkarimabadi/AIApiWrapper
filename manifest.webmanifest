@@ -1,6 +1,6 @@
 {
-  "name": "AIApiWrapper",
-  "short_name": "AIApiWrapper",
+  "name": "ابزارهای هوش مصنوعی",
+  "short_name": "ابزار هوش‌مصنوعی",
   "id": "./",
   "start_url": "./",
   "display": "standalone",
