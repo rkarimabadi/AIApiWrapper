@@ -433,7 +433,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-nHB5lrogHPac7BcMb66OQfXUxkrbaA464GnWCgvdfRE=",
+      "hash": "sha256-ePS52feuBuD9rmzxjKZnL7sWsXtbdnaCqfoMvZwVtOY=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -445,7 +445,7 @@
       "url": "_framework\/dotnet.native.wasm"
     },
     {
-      "hash": "sha256-UrlMGgiLAiENM+yMuguzZ9EHm+zddLO7OJhTA1PYsrA=",
+      "hash": "sha256-CFyjOlP\/dZSf7Uluq705ld060bp2ScrY6WKcAFlDHtM=",
       "url": "_framework\/AIApiWrapper.wasm"
     },
     {
@@ -457,7 +457,7 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.Forms.wasm"
     },
     {
-      "hash": "sha256-w\/gToQORuiq\/5q\/QavbH5f0ngXFH4ebxFaZqM1dMuYQ=",
+      "hash": "sha256-OTPpWVXKsMcBgz\/pr6jIKDNBs\/v8uyq3oMWClnwDNWo=",
       "url": "_framework\/Microsoft.AspNetCore.Components.wasm"
     },
     {
@@ -713,5 +713,5 @@
       "url": "_content\/Habits.UIToolkit\/Habits.UIToolkit.bundle.scp.css"
     }
   ],
-  "version": "vKIFcqtt"
+  "version": "6MixqTNa"
 };
