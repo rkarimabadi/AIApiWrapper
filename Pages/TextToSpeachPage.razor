@@ -53,8 +53,8 @@
                 statusMessage = "تبدیل متن به صدا نتیجه‌ای نداشت.";
 
             }
-            StateHasChanged();
         }
         flag = false;
+        await InvokeAsync(StateHasChanged);
     }
 }
