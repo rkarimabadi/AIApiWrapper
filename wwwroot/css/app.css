@@ -1,12 +1,22 @@
-@import url('fonts/Peyda/02-Farsi_Namerals/WebFonts/fontiran.css');
-@import url('fonts/codicons/codicon.css');
+@import url('../fonts/Peyda/02-Farsi_Namerals/WebFonts/fontiran.css');
+@import url('../fonts/codicons/codicon.css');
 
-
-
+.container {
+    flex-direction: column;
+    display: flex;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+.card {
+    border-radius: 10px;
+}
 html, body {
     font-family: 'PeydaWebFaNum', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
 }
-
+.text-justify {
+    text-align: justify;
+}
 .vertical-center {
     vertical-align: middle;
 }

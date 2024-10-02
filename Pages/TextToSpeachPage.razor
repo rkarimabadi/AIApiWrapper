@@ -1,0 +1,49 @@
+﻿@page "/services/text-to-speach"
+@using AIApiWrapper.Components
+@using AIApiWrapper.Models
+@using AIApiWrapper.Services
+
+@inject AudioService audioService
+<PageTitle>تبدیل متن به گفتار</PageTitle>
+
+<HeadingComponent Icon="chrome-restore" class="my-3 shadow-sm">تبدیل متن به گفتار</HeadingComponent>
+<div class="card text-box mt-2" style="min-width: 18rem;">
+    <EditForm Model="InputString" class="card-body d-flex flex-column flex-grow-1" id="input-text-form" FormName="input-text-form" OnSubmit="SubmitString">
+        <div class="card-title text-small align-self-start">متن را در کادر پائین وارد کنید</div>
+        <InputTextArea @bind-Value="InputString" class="form-control border-0 h-100 card-text align-self-stretch" id="exampleFormControlTextarea1"></InputTextArea>
+    </EditForm>
+
+</div>
+<div class="d-grid mt-3">
+    <button type="submit" form="input-text-form" class="btn btn-primary rounded-3">پردازش</button>
+</div>
+<div>@statusMessage</div>
+        @if (speechResponse != null)
+        {
+            <div class ="form-control">
+                <AudioPlaybackComponent Url="@speechResponse.Data.Data.FilePath" />
+            </div>
+        }
+@code {
+    private string? InputString { get; set; } = "";
+    private string? statusMessage { get; set; }
+    private SpeachResponse speechResponse;
+    private async Task SubmitString()
+    {
+        var stringChracterCount = InputString?.Length ?? 0;
+        if(stringChracterCount < 100)
+        {
+            speechResponse = await audioService.SendInputStringAsync(InputString!);
+            if (speechResponse.Data.Status == "success")
+            {
+                statusMessage = "تبدیل متن به صدا موفقیت آمیز بود.";
+            }
+            else
+            {
+                statusMessage = "تبدیل متن به صدا نتیجه‌ای نداشت.";
+
+            }
+            StateHasChanged();
+        }
+    }
+}
