@@ -41,7 +41,7 @@
         flag = true;
         speechResponse = null;
         var stringChracterCount = InputString?.Length ?? 0;
-        if(stringChracterCount < 100)
+        if(stringChracterCount < 1000)
         {
             speechResponse = await audioService.SendInputStringAsync(InputString!);
             if (speechResponse.Data.Status == "success")
