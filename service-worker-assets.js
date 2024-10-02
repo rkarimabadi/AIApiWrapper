@@ -414,7 +414,7 @@
     },
     {
       "hash": "sha256-0Dpj\/NkVD5WqSC16ZvJLmlc38iv9+Je+umYBVOycPVU=",
-      "url": "_framework\/dotnet.runtime.8.0.8.mbdpnrzzmt.js"
+      "url": "_framework\/dotnet.runtime.8.0.8.gjn324r0ni.js"
     },
     {
       "hash": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
@@ -429,7 +429,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-fU5Y5XAs4g08MRjoN9lt62teNWJ6HUp2yWNeFQmN+\/M=",
+      "hash": "sha256-NmdZnu5F6cAFVhjU5keXjOQ9yl15BFK469+dMvDq3tA=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -437,11 +437,11 @@
       "url": "_framework\/dotnet.native.8.0.8.d2pmz982ox.js"
     },
     {
-      "hash": "sha256-M2bG8hj\/rEWKQEIon1nMwctaYeXBg7V4P4HJIvH+Dng=",
+      "hash": "sha256-BjJJcQhz1SOqbOSORGjtpqOtZFbWNNiuXYTOtuuTLyw=",
       "url": "_framework\/dotnet.native.wasm"
     },
     {
-      "hash": "sha256-3TqOlHLY5ELk4eJNx5h76ERuAiuMPDx7uKPOEIZo4N4=",
+      "hash": "sha256-EYnF7Fzyx8cOFcCwFyYFSZTOZRQZ+6E4RbLMtJ+ZRiM=",
       "url": "_framework\/AIApiWrapper.wasm"
     },
     {
@@ -577,5 +577,5 @@
       "url": "_content\/Habits.UIToolkit\/Habits.UIToolkit.bundle.scp.css"
     }
   ],
-  "version": "G2oohtHC"
+  "version": "utnetRz1"
 };
