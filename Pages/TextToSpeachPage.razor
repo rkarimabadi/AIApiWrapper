@@ -15,21 +15,31 @@
 
 </div>
 <div class="d-grid mt-3">
-    <button type="submit" form="input-text-form" class="btn btn-primary rounded-3">پردازش</button>
+    <button type="submit" form="input-text-form" class="btn btn-primary rounded-3" disabled="@flag">پردازش</button>
 </div>
-<div>@statusMessage</div>
-        @if (speechResponse != null)
-        {
-            <div class ="form-control">
-                <AudioPlaybackComponent Url="@speechResponse.Data.Data.FilePath" />
-            </div>
-        }
+
+<div class="mt-3 p-0">
+    @if (speechResponse is not null)
+    {
+        <AudioPlaybackComponent Url="@speechResponse.Data.Data.FilePath" />
+    }
+    else
+    {
+        <AudioPlaybackComponent Url="" />
+    }
+</div>
+
+
+
 @code {
     private string? InputString { get; set; } = "";
     private string? statusMessage { get; set; }
-    private SpeachResponse speechResponse;
+    private bool flag = false;
+    private SpeachResponse? speechResponse;
     private async Task SubmitString()
     {
+        flag = true;
+        speechResponse = null;
         var stringChracterCount = InputString?.Length ?? 0;
         if(stringChracterCount < 100)
         {
@@ -45,5 +55,6 @@
             }
             StateHasChanged();
         }
+        flag = false;
     }
 }
