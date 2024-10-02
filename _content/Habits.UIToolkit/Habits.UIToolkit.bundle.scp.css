@@ -34,6 +34,38 @@ footer[b-x3pi6euale] {
     fill: #bbbbbb !important;
     cursor: pointer;
 }
+/* _content/Habits.UIToolkit/Heading/HeadingComponent.razor.rz.scp.css */
+.app-heading[b-m5619rx7rt] {
+    background-color: #f8f9fa; /* Soft gray background */
+    border: 1px solid #dee2e6; /* Border */
+    padding: 10px; /* Proper padding */
+    display: flex;
+    align-items: center;
+    margin: 0; /* No margin */
+    border-radius: 5px;
+    white-space: nowrap;
+    overflow:hidden;
+}
+
+    .app-heading .icon-square[b-m5619rx7rt] {
+        background-color: #2775c2; /* Dark gray background for the icon */
+        color: white; /* White icon color */
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: -10px -10px -10px 10px;
+        border-radius:0 5px 5px 0;
+    }
+
+    .app-heading h6[b-m5619rx7rt] {
+        margin: 0;
+        font-size: 1.0rem;
+        color: #343a40; /* Dark gray text color */
+        font-weight:bold;
+    }
 /* _content/Habits.UIToolkit/MainContainer/MainComponent.razor.rz.scp.css */
 main[b-uoeoemseml] {
     padding-bottom: 50px;

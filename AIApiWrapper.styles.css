@@ -203,3 +203,14 @@ main[b-9t7nh4badv] {
         overflow-y: auto;
     }
 }
+/* /Pages/TextToSpeachPage.razor.rz.scp.css */
+.text-box[b-1qm2hbj18w] {
+    flex-direction: column;
+    display: flex;
+    flex-grow: 1;
+    overflow-y: auto;
+    border-radius:10px;
+}
+.text-small[b-1qm2hbj18w] {
+    font-size: small;
+}
