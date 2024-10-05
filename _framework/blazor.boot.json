@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "AIApiWrapper",
   "resources": {
-    "hash": "sha256-hYFerqqg+VbxnZP2n9tJfhz1oGol3f/GggasmryuP9I=",
+    "hash": "sha256-89rZojWl1p2hjHxWhQPPGFXFwp04xCkVMYdYn28Dmi0=",
     "jsModuleNative": {
       "dotnet.native.8.0.8.d2pmz982ox.js": "sha256-R0yxDcHdZFPj9Hu1+1GFeuZwnRKmUSR4eC8qD0Jp0Y0="
     },
@@ -18,10 +18,10 @@
     },
     "assembly": {
       "AIApiWrapper.Configurations.wasm": "sha256-2rHWJigXji2Wts+izkbMrmwAzcCsHQo9MPtOhqqEpLE=",
-      "AIApiWrapper.wasm": "sha256-gAFLEIlR635gsauoAV5TFx32e9i5VQ33bgmPgAKCnQ4=",
+      "AIApiWrapper.wasm": "sha256-aLoS+58oT9WqGUMyPjiQ6SGB7azMmPHUE8Yw3ki8U3I=",
       "Habits.UIToolkit.wasm": "sha256-c6tnGNvkykj4C+wDpWh+W3x2h2NbVyKQwLnfQlclDmA=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-DGztFtXfi/hv/oBMuZWWVVyLCNqo57nPfDwS4No0/cg=",
-      "Microsoft.AspNetCore.Components.wasm": "sha256-OTPpWVXKsMcBgz/pr6jIKDNBs/v8uyq3oMWClnwDNWo=",
+      "Microsoft.AspNetCore.Components.wasm": "sha256-I6Y+gVejxtUE0js3ooDss5B5/+JFmiBSH7VONZyUiHA=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-FNvYAc7QurGJEwrKDBvbTR/9mIMCKM0picDNCw1MHfI=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-Z0KeJnxzSwqik0M9e2Pq8Zlbh/Nu4uP6un2MJ6H0qAI=",
       "Microsoft.CSharp.wasm": "sha256-XA0E1Z4IhJcopS/t3N9Eh4Bc5WcG0w/f2Vzrm0EegS8=",
