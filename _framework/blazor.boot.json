@@ -1,15 +1,15 @@
 {
   "mainAssemblyName": "AIApiWrapper",
   "resources": {
-    "hash": "sha256-1Is1+HCoWQevHvHPjUiaR7WsqE1FnjnEgHnXjp8/zIs=",
+    "hash": "sha256-tmqjh8RCwrpuAb3g+6O60TRO4wiWE4YKdzhGEjY+HOQ=",
     "jsModuleNative": {
       "dotnet.native.8.0.8.d2pmz982ox.js": "sha256-R0yxDcHdZFPj9Hu1+1GFeuZwnRKmUSR4eC8qD0Jp0Y0="
     },
     "jsModuleRuntime": {
-      "dotnet.runtime.8.0.8.gjn324r0ni.js": "sha256-0Dpj/NkVD5WqSC16ZvJLmlc38iv9+Je+umYBVOycPVU="
+      "dotnet.runtime.8.0.8.mbdpnrzzmt.js": "sha256-0Dpj/NkVD5WqSC16ZvJLmlc38iv9+Je+umYBVOycPVU="
     },
     "wasmNative": {
-      "dotnet.native.wasm": "sha256-i9MzCLLKYAf2NPhjK6571pDocWKxOmyZF5Qh6dnRLHI="
+      "dotnet.native.wasm": "sha256-j7a/OH8w8h7TYHpRDwT0s58OZ3cKGujhaWrGeQTiGqo="
     },
     "icu": {
       "icudt_CJK.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
@@ -18,7 +18,7 @@
     },
     "assembly": {
       "AIApiWrapper.Configurations.wasm": "sha256-2rHWJigXji2Wts+izkbMrmwAzcCsHQo9MPtOhqqEpLE=",
-      "AIApiWrapper.wasm": "sha256-+HMO2DEb2D3KzPYacamVPHOHjVxkngdj8+r++DZk9pY=",
+      "AIApiWrapper.wasm": "sha256-wxfoDKBkrO+ZOppX5QE237jC6GrbfwoBJihNEUfTO3c=",
       "Habits.UIToolkit.wasm": "sha256-c6tnGNvkykj4C+wDpWh+W3x2h2NbVyKQwLnfQlclDmA=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-DGztFtXfi/hv/oBMuZWWVVyLCNqo57nPfDwS4No0/cg=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-OTPpWVXKsMcBgz/pr6jIKDNBs/v8uyq3oMWClnwDNWo=",
