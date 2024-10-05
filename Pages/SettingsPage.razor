@@ -17,18 +17,18 @@
                         <label class="text-smaller">انتخاب گوینده</label>
                         <div class="d-grid mt-1">
                             <div class="btn-group">
-                                <button type="button" class=@(textToSpeachSetting.Speaker == "1" ? "btn btn-sm btn-primary active" : "btn btn-sm btn-primary") @onclick=@(() => textToSpeachSetting.Speaker = "1")>سیمین</button>
-                                <button type="button" class=@(textToSpeachSetting.Speaker == "2" ? "btn btn-sm btn-primary active" : "btn btn-sm btn-primary") @onclick=@(() => textToSpeachSetting.Speaker = "2")>ایمان</button>
-                                <button type="button" class=@(textToSpeachSetting.Speaker == "3" ? "btn btn-sm btn-primary active" : "btn btn-sm btn-primary") @onclick=@(() => textToSpeachSetting.Speaker = "3")>سمانه</button>
-                                <button type="button" class=@(textToSpeachSetting.Speaker == "4" ? "btn btn-sm btn-primary active" : "btn btn-sm btn-primary") @onclick=@(() => textToSpeachSetting.Speaker = "4")>مژگان</button>
+                                <button type="button" class=@(textToSpeachSetting.Speaker == "1" ? "btn btn-sm btn-primary active" : "btn btn-sm btn-primary") @onclick=@(() => {textToSpeachSetting.Speaker = "1"; flag = false;})>سیمین</button>
+                                <button type="button" class=@(textToSpeachSetting.Speaker == "2" ? "btn btn-sm btn-primary active" : "btn btn-sm btn-primary") @onclick=@(() => {textToSpeachSetting.Speaker = "2"; flag = false;})>ایمان</button>
+                                <button type="button" class=@(textToSpeachSetting.Speaker == "3" ? "btn btn-sm btn-primary active" : "btn btn-sm btn-primary") @onclick=@(() => {textToSpeachSetting.Speaker = "3"; flag = false;})>سمانه</button>
+                                <button type="button" class=@(textToSpeachSetting.Speaker == "4" ? "btn btn-sm btn-primary active" : "btn btn-sm btn-primary") @onclick=@(() => {textToSpeachSetting.Speaker = "4"; flag = false;})>مژگان</button>
                             </div>
                         </div>
                         <label class="text-smaller mt-3">تعیین سرعت پخش صوت</label>
                         <div class="d-grid mt-1">
-                            <input min="0" max="10" type="range" value="@textToSpeachSetting.Speed" class="form-range" @onchange=@((value) => textToSpeachSetting.Speed = value.Value.ToString())>
+                            <input min="0" max="10" type="range" value="@textToSpeachSetting.Speed" class="form-range" @onchange=@((value) => {textToSpeachSetting.Speed = value.Value.ToString(); flag = false;})>
                         </div>
                 </div>
-                    <button form="text-to-speach-settings-form" type="submit" class="btn btn-link float-end" disabled="@flag">ذخیره</button>
+                    <button form="text-to-speach-settings-form" type="submit" class="btn btn-link float-end" disabled="@flag">@(!flag ? "ذخیره": "ذخیره شد!")</button>
             </div>
             </EditForm>
         </div>
@@ -51,7 +51,6 @@
         if (!string.IsNullOrEmpty(textToSpeachSettingString))
         {
             textToSpeachSetting = JsonConvert.DeserializeObject<SpeachRequestPayload>(textToSpeachSettingString)!;
-
         }
     }
     private bool flag = false;
@@ -59,6 +58,5 @@
     {
         flag = true;
         await JSRuntime.InvokeVoidAsync("localStorage.setItem", "textToSpeachSetting", JsonConvert.SerializeObject(textToSpeachSetting));
-        flag = false;
     }
 }
