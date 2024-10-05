@@ -1,4 +1,4 @@
-@import url('../fonts/Peyda/02-Farsi_Namerals/WebFonts/fontiran.css');
+﻿@import url('../fonts/Peyda/02-Farsi_Namerals/WebFonts/fontiran.css');
 @import url('../fonts/codicons/codicon.css');
 
 .container {
@@ -98,7 +98,7 @@ h1:focus {
 }
 
     .loading-progress-text:after {
-        content: var(--blazor-load-percentage-text, "Loading");
+        content: var(--blazor-load-percentage-text, "بارگزاری");
     }
 
 code {
