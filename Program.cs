@@ -11,9 +11,8 @@ namespace AIApiWrapper
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
             builder.RootComponents.Add<App>("#app");
             builder.RootComponents.Add<HeadOutlet>("head::after");
-
-            builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-            builder.Services.AddHttpClient("AudioApi", sp => new HttpClient { BaseAddress = new Uri("https://partai.gw.isahab.ir") });
+            builder.Configuration.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+            builder.Services.AddHttpClient();
             builder.Services.AddScoped<AudioService>();
             await builder.Build().RunAsync();
         }

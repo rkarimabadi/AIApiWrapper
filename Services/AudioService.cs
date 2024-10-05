@@ -8,11 +8,12 @@ namespace AIApiWrapper.Services
     {
         private readonly HttpClient _httpClient;
 
-        public AudioService(IHttpClientFactory httpClientFactory)
+        public AudioService(IHttpClientFactory httpClientFactory, IConfiguration configuration)
         {
-            _httpClient = httpClientFactory.CreateClient("AudioApi");
-            _httpClient.BaseAddress = new Uri("https://partai.gw.isahab.ir");
-            _httpClient.DefaultRequestHeaders.Add("gateway-token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzeXN0ZW0iOiJzYWhhYiIsImNyZWF0ZVRpbWUiOiIxNDAwMTEwNDA4NTUzMTY4NCIsInVuaXF1ZUZpZWxkcyI6eyJ1c2VybmFtZSI6ImRlbW8ifSwiZGF0YSI6IiJ9.qyYghVcrafLKrcsVtiU2C1geXmFJwk_GZstqYpnOjd8");
+            _httpClient = httpClientFactory.CreateClient();
+            IConfigurationSection textToSpeachConfig = configuration.GetSection("TextToSpeach");
+            _httpClient.BaseAddress = new Uri(textToSpeachConfig["Endpoint"]!);
+            _httpClient.DefaultRequestHeaders.Add("gateway-token", textToSpeachConfig["Token"]);
         }
 
         public async Task<AudioResponse> SendAudioAsync(string base64Audio)
