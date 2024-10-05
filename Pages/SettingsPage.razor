@@ -25,10 +25,10 @@
                         </div>
                         <label class="text-smaller mt-3">تعیین سرعت پخش صوت</label>
                         <div class="d-grid mt-1">
-                            <input min="0" max="100" type="range" class="form-range" id="customRange1" @onchange=@((value) => textToSpeachSetting.Speed = value.Value.ToString())>
+                            <input min="0" max="100" type="range" value="@textToSpeachSetting.Speed" class="form-range" @onchange=@((value) => textToSpeachSetting.Speed = value.Value.ToString())>
                         </div>
                 </div>
-                    <button form="text-to-speach-settings-form" type="submit" class="btn btn-link float-end">ذخیره</button>
+                    <button form="text-to-speach-settings-form" type="submit" class="btn btn-link float-end" disabled="@flag">ذخیره</button>
             </div>
             </EditForm>
         </div>
@@ -54,8 +54,11 @@
 
         }
     }
+    private bool flag = false;
     private async Task SaveTextToSpeachSettings()
     {
+        flag = true;
         await JSRuntime.InvokeVoidAsync("localStorage.setItem", "textToSpeachSetting", JsonConvert.SerializeObject(textToSpeachSetting));
+        flag = false;
     }
 }
