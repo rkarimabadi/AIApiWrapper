@@ -385,11 +385,11 @@
       "url": "fonts\/Peyda\/Peyda Features.pdf"
     },
     {
-      "hash": "sha256-LvMKJC\/NrZiBfIIkZvY1P4o8aV2mEBWH81A2nr0L\/wE=",
+      "hash": "sha256-68H+cgxreIXvUnarFpuTJek5t5VE25VtHs8EsYv3obg=",
       "url": "icon-192.png"
     },
     {
-      "hash": "sha256-ctIZiq+NIdDmPygd6dH3C6tib1DNmqQm9APf5cTTA40=",
+      "hash": "sha256-enw5wY3sjzeVRBslSZ2hWKjSTaUBA+C0bjorrQXvFng=",
       "url": "icon-512.png"
     },
     {
@@ -433,7 +433,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-j\/0+YUSmNcRoq6Lb\/oRQS8QjWj\/fhMCrFt066VyMql8=",
+      "hash": "sha256-xhqYsKyEZQG5Mdj+DX5D3aBHhDdwp4XwErtApmpvlVk=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -449,7 +449,7 @@
       "url": "_framework\/AIApiWrapper.Configurations.wasm"
     },
     {
-      "hash": "sha256-aLoS+58oT9WqGUMyPjiQ6SGB7azMmPHUE8Yw3ki8U3I=",
+      "hash": "sha256-8gx6KRmDoA8BbRGluRSW\/ihCBIzknO9dnDW74buM6ds=",
       "url": "_framework\/AIApiWrapper.wasm"
     },
     {
@@ -717,5 +717,5 @@
       "url": "_content\/Habits.UIToolkit\/Habits.UIToolkit.bundle.scp.css"
     }
   ],
-  "version": "GbEp3AQ\/"
+  "version": "WwUxHWcn"
 };

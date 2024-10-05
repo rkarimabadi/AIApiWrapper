@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "AIApiWrapper",
   "resources": {
-    "hash": "sha256-89rZojWl1p2hjHxWhQPPGFXFwp04xCkVMYdYn28Dmi0=",
+    "hash": "sha256-+/9EA0dimZJZBx0OzUPS5c/e9Rqgns+evEDtRbwQAos=",
     "jsModuleNative": {
       "dotnet.native.8.0.8.d2pmz982ox.js": "sha256-R0yxDcHdZFPj9Hu1+1GFeuZwnRKmUSR4eC8qD0Jp0Y0="
     },
@@ -18,7 +18,7 @@
     },
     "assembly": {
       "AIApiWrapper.Configurations.wasm": "sha256-2rHWJigXji2Wts+izkbMrmwAzcCsHQo9MPtOhqqEpLE=",
-      "AIApiWrapper.wasm": "sha256-aLoS+58oT9WqGUMyPjiQ6SGB7azMmPHUE8Yw3ki8U3I=",
+      "AIApiWrapper.wasm": "sha256-8gx6KRmDoA8BbRGluRSW/ihCBIzknO9dnDW74buM6ds=",
       "Habits.UIToolkit.wasm": "sha256-c6tnGNvkykj4C+wDpWh+W3x2h2NbVyKQwLnfQlclDmA=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-DGztFtXfi/hv/oBMuZWWVVyLCNqo57nPfDwS4No0/cg=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-I6Y+gVejxtUE0js3ooDss5B5/+JFmiBSH7VONZyUiHA=",
