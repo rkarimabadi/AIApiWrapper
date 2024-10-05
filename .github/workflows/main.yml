@@ -25,6 +25,8 @@ jobs:
     # Publishes Blazor project to the release-folder
     - name: Publish .NET Core Project
       run: dotnet publish AIApiWrapper.csproj -c:Release -p:GHPages=true -o dist/Web --nologo
+    - name: write appsettings.json 
+      run: dotnet publish -c Release -p:GHPages=true -o dist/Web echo '{"TextToSpeech__Endpoint":"https://example.com","TextToSpeech__Token":"abc123"}' > dist/Web/appsettings.json
     - name: Rewrite base href
       uses: SteveSandersonMS/ghaction-rewrite-base-href@v1
       with:
