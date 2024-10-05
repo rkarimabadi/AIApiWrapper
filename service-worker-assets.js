@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-xDaHJY4Gudesey\/fZCaLVCW+VFHjbH\/RJLb1inH7hXA=",
+      "hash": "sha256-kMyXwp43R3y3J44SZ6YPYvsiwCk1KDtxGHzC5\/ubaCY=",
       "url": "css\/app.css"
     },
     {
@@ -405,7 +405,7 @@
       "url": "manifest.webmanifest"
     },
     {
-      "hash": "sha256-qH2nu2NgaXeEdX0sqlAfoNzpUQ54cFjybk8iyW1tZxI=",
+      "hash": "sha256-k40Nv6nP2+AIvWVAQwbosTZ4ue30931BLqvYFe0jjVI=",
       "url": "AIApiWrapper.styles.css"
     },
     {
@@ -433,7 +433,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-xhqYsKyEZQG5Mdj+DX5D3aBHhDdwp4XwErtApmpvlVk=",
+      "hash": "sha256-KFsJ5cPoCzZXH6N9rmGM2Ih+HOLHs+GVGVVJT6oV9Ok=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -449,7 +449,7 @@
       "url": "_framework\/AIApiWrapper.Configurations.wasm"
     },
     {
-      "hash": "sha256-8gx6KRmDoA8BbRGluRSW\/ihCBIzknO9dnDW74buM6ds=",
+      "hash": "sha256-gxvSSbTcOkqONN6hldr1H5rxfQZ5FrfBuJzg7CTOr+o=",
       "url": "_framework\/AIApiWrapper.wasm"
     },
     {
@@ -461,7 +461,7 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.Forms.wasm"
     },
     {
-      "hash": "sha256-I6Y+gVejxtUE0js3ooDss5B5\/+JFmiBSH7VONZyUiHA=",
+      "hash": "sha256-17K+Q16\/unzhoLbO437qx8XHHiqcFNRczkpHoNjgW1s=",
       "url": "_framework\/Microsoft.AspNetCore.Components.wasm"
     },
     {
@@ -717,5 +717,5 @@
       "url": "_content\/Habits.UIToolkit\/Habits.UIToolkit.bundle.scp.css"
     }
   ],
-  "version": "WwUxHWcn"
+  "version": "UgQ7+Y33"
 };

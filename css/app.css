@@ -17,6 +17,9 @@ html, body {
 .text-justify {
     text-align: justify;
 }
+.text-smaller {
+    font-size:smaller;
+}
 .vertical-center {
     vertical-align: middle;
 }
@@ -98,7 +101,7 @@ h1:focus {
 }
 
     .loading-progress-text:after {
-        content: var(--blazor-load-percentage-text, "بارگزاری");
+        content: var(--blazor-load-percentage-text, "بارگذاری");
     }
 
 code {
