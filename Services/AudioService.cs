@@ -1,4 +1,5 @@
-﻿using AIApiWrapper.Models;
+﻿using AIApiWrapper.Configurations;
+using AIApiWrapper.Models;
 using System.Text;
 using System.Text.Json;
 
@@ -8,12 +9,11 @@ namespace AIApiWrapper.Services
     {
         private readonly HttpClient _httpClient;
 
-        public AudioService(IHttpClientFactory httpClientFactory, IConfiguration configuration)
+        public AudioService(IHttpClientFactory httpClientFactory, TextToSpeachConfig configuration)
         {
             _httpClient = httpClientFactory.CreateClient();
-            IConfigurationSection textToSpeachConfig = configuration.GetSection("TextToSpeach");
-            _httpClient.BaseAddress = new Uri(textToSpeachConfig["Endpoint"]!);
-            _httpClient.DefaultRequestHeaders.Add("gateway-token", textToSpeachConfig["Token"]);
+            _httpClient.BaseAddress = new Uri(configuration.Endpoint);
+            _httpClient.DefaultRequestHeaders.Add("gateway-token", configuration.Token);
         }
 
         public async Task<AudioResponse> SendAudioAsync(string base64Audio)
