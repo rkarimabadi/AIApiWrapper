@@ -20,6 +20,9 @@ html, body {
 .vertical-center {
     vertical-align: middle;
 }
+.vertical-top {
+    vertical-align: top;
+}
 
 h1:focus {
     outline: none;
