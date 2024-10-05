@@ -433,7 +433,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-kEJ4IXmtKMCM0ttMVfC6P6KoKqvNepZGiiua8F4tB64=",
+      "hash": "sha256-ZSEf5f35bi+zQI3umt5I2aYLP\/S2vlSMxERdkOexkqM=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -449,7 +449,7 @@
       "url": "_framework\/AIApiWrapper.Configurations.wasm"
     },
     {
-      "hash": "sha256-MYOf4atoO8PmTQJQO\/SLL6hVdmJs\/DRxkUa\/v6xQ2m0=",
+      "hash": "sha256-2sogkx1aNL8V2+jTEXOwkG7FPNkvjfBOgB6FiDB5TqY=",
       "url": "_framework\/AIApiWrapper.wasm"
     },
     {
@@ -717,5 +717,5 @@
       "url": "_content\/Habits.UIToolkit\/Habits.UIToolkit.bundle.scp.css"
     }
   ],
-  "version": "uk06A+QT"
+  "version": "RhBX4pFq"
 };
