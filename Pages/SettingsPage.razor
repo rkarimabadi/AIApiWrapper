@@ -1,0 +1,61 @@
+﻿@page "/settings"
+@using AIApiWrapper.Models
+@using Newtonsoft.Json
+@layout SettingsLayout
+@inject IJSRuntime JSRuntime
+
+<PageTitle>تنظیمات</PageTitle>
+<HeadingComponent Icon="chrome-restore" class="my-3 shadow-sm">سرویس متن به گفتار</HeadingComponent>
+<div class="row mt-2">
+    <div class="col">
+        <div class="card">
+            <EditForm  id="text-to-speach-settings-form" Model="textToSpeachSetting" FormName="text-to-speach-settings-form" OnSubmit=@(async() => await SaveTextToSpeachSettings())>
+            <div class="card-body">
+                <h5 class="card-title">آواشو</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">تبدیل متن به گفتار</h6>
+                <div class="card-text text-justify">
+                        <label class="text-smaller">انتخاب گوینده</label>
+                        <div class="d-grid mt-1">
+                            <div class="btn-group">
+                                <button type="button" class=@(textToSpeachSetting.Speaker == "1" ? "btn btn-sm btn-primary active" : "btn btn-sm btn-primary") @onclick=@(() => textToSpeachSetting.Speaker = "1")>سیمین</button>
+                                <button type="button" class=@(textToSpeachSetting.Speaker == "2" ? "btn btn-sm btn-primary active" : "btn btn-sm btn-primary") @onclick=@(() => textToSpeachSetting.Speaker = "2")>ایمان</button>
+                                <button type="button" class=@(textToSpeachSetting.Speaker == "3" ? "btn btn-sm btn-primary active" : "btn btn-sm btn-primary") @onclick=@(() => textToSpeachSetting.Speaker = "3")>سمانه</button>
+                                <button type="button" class=@(textToSpeachSetting.Speaker == "4" ? "btn btn-sm btn-primary active" : "btn btn-sm btn-primary") @onclick=@(() => textToSpeachSetting.Speaker = "4")>مژگان</button>
+                            </div>
+                        </div>
+                        <label class="text-smaller mt-3">تعیین سرعت پخش صوت</label>
+                        <div class="d-grid mt-1">
+                            <input min="0" max="100" type="range" class="form-range" id="customRange1" @onchange=@((value) => textToSpeachSetting.Speed = value.Value.ToString())>
+                        </div>
+                </div>
+                    <button form="text-to-speach-settings-form" type="submit" class="btn btn-link float-end">ذخیره</button>
+            </div>
+            </EditForm>
+        </div>
+    </div>
+</div>
+@code {
+    private SpeachRequestPayload textToSpeachSetting = new SpeachRequestPayload
+        {
+            Data = String.Empty,
+            FilePath = true,
+            Base64 = "1",
+            Checksum = "1",
+            Timestamp = "1",
+            Speaker = "3",
+            Speed = "1"
+        };
+    protected override async Task OnInitializedAsync()
+    {
+        var textToSpeachSettingString = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "textToSpeachSetting");
+        if (!string.IsNullOrEmpty(textToSpeachSettingString))
+        {
+            textToSpeachSetting = JsonConvert.DeserializeObject<SpeachRequestPayload>(textToSpeachSettingString)!;
+
+        }
+    }
+    private async Task SaveTextToSpeachSettings()
+    {
+        await JSRuntime.InvokeVoidAsync("localStorage.setItem", "textToSpeachSetting", JsonConvert.SerializeObject(textToSpeachSetting));
+    }
+}

@@ -34,18 +34,8 @@ namespace AIApiWrapper.Services
             var responseContent = await response.Content.ReadAsStringAsync();
             return JsonSerializer.Deserialize<AudioResponse>(responseContent, new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
         }
-        public async Task<SpeachResponse> SendInputStringAsync(string inputString)
+        public async Task<SpeachResponse> SendInputStringAsync(SpeachRequestPayload payload)
         {
-            var payload = new SpeachRequestPayload
-            {
-                Data = inputString,
-                FilePath = true,
-                Base64 = "1",
-                Checksum = "1",
-                Timestamp = "1",
-                Speaker = "3",
-                Speed = "1"
-            };
             var json = JsonSerializer.Serialize(payload, new JsonSerializerOptions
             {
                 PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
