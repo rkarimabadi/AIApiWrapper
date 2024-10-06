@@ -1,10 +1,1 @@
-﻿.text-box {
-    flex-direction: column;
-    display: flex;
-    flex-grow: 1;
-    overflow-y: auto;
-    border-radius:10px;
-}
-.text-small {
-    font-size: small;
-}
+﻿

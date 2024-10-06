@@ -7,6 +7,9 @@
     flex-grow: 1;
     overflow-y: auto;
 }
+main {
+    padding-bottom: 5px !important;
+}
 .card {
     border-radius: 10px;
 }
@@ -14,8 +17,18 @@ html, body {
     font-family: 'PeydaWebFaNum', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f8f9fa;
 }
+.text-box {
+    flex-direction: column;
+    display: flex;
+    flex-grow: 1;
+    overflow-y: auto;
+    border-radius: 10px;
+}
 .text-justify {
     text-align: justify;
+}
+.text-small {
+    font-size: small;
 }
 .text-smaller {
     font-size:smaller;

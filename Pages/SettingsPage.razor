@@ -6,8 +6,8 @@
 
 <PageTitle>تنظیمات</PageTitle>
 <HeadingComponent Icon="chrome-restore" class="my-3 shadow-sm">سرویس متن به گفتار</HeadingComponent>
-<div class="row mt-2">
-    <div class="col">
+<div class="row g-3">
+    <div class="col-12">
         <div class="card">
             <EditForm  id="text-to-speach-settings-form" Model="textToSpeachSetting" FormName="text-to-speach-settings-form" OnSubmit=@(async() => await SaveTextToSpeachSettings())>
             <div class="card-body">
@@ -17,18 +17,44 @@
                         <label class="text-smaller">انتخاب گوینده</label>
                         <div class="d-grid mt-1">
                             <div class="btn-group">
-                                <button type="button" class=@(textToSpeachSetting.Speaker == "1" ? "btn btn-sm btn-primary active" : "btn btn-sm btn-primary") @onclick=@(() => {textToSpeachSetting.Speaker = "1"; flag = false;})>سیمین</button>
-                                <button type="button" class=@(textToSpeachSetting.Speaker == "2" ? "btn btn-sm btn-primary active" : "btn btn-sm btn-primary") @onclick=@(() => {textToSpeachSetting.Speaker = "2"; flag = false;})>ایمان</button>
-                                <button type="button" class=@(textToSpeachSetting.Speaker == "3" ? "btn btn-sm btn-primary active" : "btn btn-sm btn-primary") @onclick=@(() => {textToSpeachSetting.Speaker = "3"; flag = false;})>سمانه</button>
-                                <button type="button" class=@(textToSpeachSetting.Speaker == "4" ? "btn btn-sm btn-primary active" : "btn btn-sm btn-primary") @onclick=@(() => {textToSpeachSetting.Speaker = "4"; flag = false;})>مژگان</button>
+                                <button type="button" class=@(textToSpeachSetting.Speaker == "1" ? "btn btn-sm btn-primary active" : "btn btn-sm btn-primary") @onclick=@(() => {textToSpeachSetting.Speaker = "1"; textTospeachFlag = false;})>سیمین</button>
+                                <button type="button" class=@(textToSpeachSetting.Speaker == "2" ? "btn btn-sm btn-primary active" : "btn btn-sm btn-primary") @onclick=@(() => {textToSpeachSetting.Speaker = "2"; textTospeachFlag = false;})>ایمان</button>
+                                <button type="button" class=@(textToSpeachSetting.Speaker == "3" ? "btn btn-sm btn-primary active" : "btn btn-sm btn-primary") @onclick=@(() => {textToSpeachSetting.Speaker = "3"; textTospeachFlag = false;})>سمانه</button>
+                                <button type="button" class=@(textToSpeachSetting.Speaker == "4" ? "btn btn-sm btn-primary active" : "btn btn-sm btn-primary") @onclick=@(() => {textToSpeachSetting.Speaker = "4"; textTospeachFlag = false;})>مژگان</button>
                             </div>
                         </div>
                         <label class="text-smaller mt-3">تعیین سرعت پخش صوت</label>
                         <div class="d-grid mt-1">
-                            <input min="0" max="10" type="range" value="@textToSpeachSetting.Speed" class="form-range" @onchange=@((value) => {textToSpeachSetting.Speed = value.Value.ToString(); flag = false;})>
+                            <input min="0" max="10" type="range" value="@textToSpeachSetting.Speed" class="form-range" @onchange=@((value) => {textToSpeachSetting.Speed = value.Value.ToString(); textTospeachFlag = false;})>
                         </div>
                 </div>
-                    <button form="text-to-speach-settings-form" type="submit" class="btn btn-link float-end" disabled="@flag">@(!flag ? "ذخیره": "ذخیره شد!")</button>
+                    <button form="text-to-speach-settings-form" type="submit" class="btn btn-link float-end" disabled="@textTospeachFlag">@(!textTospeachFlag ? "ذخیره": "ذخیره شد!")</button>
+            </div>
+            </EditForm>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="card">
+            <EditForm id="chit-chat-bot-settings-form" Model="chitChatBotSetting" FormName="chit-chat-bot-settings-form" OnSubmit=@(async() => await SaveChitChatBotSettings())>
+            <div class="card-body">
+                    <h5 class="card-title">احوال‌پرسی</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">
+                        ربات چت‌بات تعاملی
+                   </h6>
+                <div class="card-text text-justify">
+                        <label class="text-smaller">لحن مکالمه</label>
+                        <div class="d-grid mt-1">
+                            <div class="btn-group">
+                                <button type="button" class=@(chitChatBotSetting.State == 0 ? "btn btn-sm btn-primary active" : "btn btn-sm btn-primary") @onclick=@(() => {chitChatBotSetting.State = 0; chitChatBotFlag = false;})>مودب</button>
+                                <button type="button" class=@(chitChatBotSetting.State == 1 ? "btn btn-sm btn-primary active" : "btn btn-sm btn-primary") @onclick=@(() => {chitChatBotSetting.State = 1; chitChatBotFlag = false;})>فرهیخته</button>
+                                <button type="button" class=@(chitChatBotSetting.State == 2 ? "btn btn-sm btn-primary active" : "btn btn-sm btn-primary") @onclick=@(() => {chitChatBotSetting.State = 2; chitChatBotFlag = false;})>خردمند</button>
+                                <button type="button" class=@(chitChatBotSetting.State == 3 ? "btn btn-sm btn-primary active" : "btn btn-sm btn-primary") @onclick=@(() => {chitChatBotSetting.State = 3; chitChatBotFlag = false;})>خودمانی</button>
+                                <button type="button" class=@(chitChatBotSetting.State == 4 ? "btn btn-sm btn-primary active" : "btn btn-sm btn-primary") @onclick=@(() => {chitChatBotSetting.State = 4; chitChatBotFlag = false;})>مخ‌زن</button>
+                                <button type="button" class=@(chitChatBotSetting.State == 5 ? "btn btn-sm btn-primary active" : "btn btn-sm btn-primary") @onclick=@(() => {chitChatBotSetting.State = 5; chitChatBotFlag = false;})>کتابی</button>
+                            </div>
+                        </div>
+                </div>
+                    <button form="chit-chat-bot-settings-form" type="submit" class="btn btn-link float-end mt-1" disabled="@chitChatBotFlag">@(!chitChatBotFlag ? "ذخیره" : "ذخیره شد!")</button>
             </div>
             </EditForm>
         </div>
@@ -36,27 +62,44 @@
 </div>
 @code {
     private SpeachRequestPayload textToSpeachSetting = new SpeachRequestPayload
-        {
-            Data = String.Empty,
-            FilePath = true,
-            Base64 = "1",
-            Checksum = "1",
-            Timestamp = "1",
-            Speaker = "3",
-            Speed = "1"
-        };
+    {
+        Data = String.Empty,
+        FilePath = true,
+        Base64 = "1",
+        Checksum = "1",
+        Timestamp = "1",
+        Speaker = "3",
+        Speed = "1"
+    };
+    private ChitChatBotPayload chitChatBotSetting = new ChitChatBotPayload
+    {
+        Text = string.Empty,
+        State = 0
+        
+    };
     protected override async Task OnInitializedAsync()
     {
         var textToSpeachSettingString = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "textToSpeachSetting");
+        var chitChatBotSettingString = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "chitChatBotSetting");
         if (!string.IsNullOrEmpty(textToSpeachSettingString))
         {
             textToSpeachSetting = JsonConvert.DeserializeObject<SpeachRequestPayload>(textToSpeachSettingString)!;
         }
+        if (!string.IsNullOrEmpty(chitChatBotSettingString))
+        {
+            chitChatBotSetting = JsonConvert.DeserializeObject<ChitChatBotPayload>(chitChatBotSettingString)!;
+        }
     }
-    private bool flag = false;
+    private bool textTospeachFlag = false;
     private async Task SaveTextToSpeachSettings()
     {
-        flag = true;
+        textTospeachFlag = true;
         await JSRuntime.InvokeVoidAsync("localStorage.setItem", "textToSpeachSetting", JsonConvert.SerializeObject(textToSpeachSetting));
+    }
+    private bool chitChatBotFlag = false;
+    private async Task SaveChitChatBotSettings()
+    {
+        chitChatBotFlag = true;
+        await JSRuntime.InvokeVoidAsync("localStorage.setItem", "chitChatBotSetting", JsonConvert.SerializeObject(chitChatBotSetting));
     }
 }

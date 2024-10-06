@@ -13,8 +13,10 @@ namespace AIApiWrapper
             builder.RootComponents.Add<App>("#app");
             builder.RootComponents.Add<HeadOutlet>("head::after");
             builder.Services.AddSingleton<TextToSpeachConfig>();
+            builder.Services.AddSingleton<ChitChatBotsConfig>();
             builder.Services.AddHttpClient();
             builder.Services.AddScoped<AudioService>();
+            builder.Services.AddScoped<ChatBotService>();
             await builder.Build().RunAsync();
         }
     }

@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AIApiWrapper.Configurations" Version="1.0.0" />
+    <PackageReference Include="AIApiWrapper.Configurations" Version="1.1.2" />
     <PackageReference Include="Habits.UIToolkit" Version="1.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.8" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.8" PrivateAssets="all" />

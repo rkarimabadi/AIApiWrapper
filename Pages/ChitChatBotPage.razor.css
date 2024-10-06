@@ -1,0 +1,21 @@
+﻿.form-control {
+    border-radius: 10px;
+}
+.btn {
+    border-radius: 10px;
+}
+main {
+    padding-bottom: 5px !important;
+}
+::deep.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+    ::deep.card-body > div:nth-child(odd) {
+        align-self: flex-start;
+    }
+
+    ::deep.card-body > div:nth-child(even) {
+        align-self: flex-end;
+    }
