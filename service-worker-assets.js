@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-kMyXwp43R3y3J44SZ6YPYvsiwCk1KDtxGHzC5\/ubaCY=",
+      "hash": "sha256-TNoHrDTS5o6hn1eCI0u4ONjmN+gbj1k0obRUKZv4u+U=",
       "url": "css\/app.css"
     },
     {
@@ -405,7 +405,7 @@
       "url": "manifest.webmanifest"
     },
     {
-      "hash": "sha256-k40Nv6nP2+AIvWVAQwbosTZ4ue30931BLqvYFe0jjVI=",
+      "hash": "sha256-8EISTEmTK9CWs8t8+gn1IXm7nXNPUjZAp3U+N1MlxaA=",
       "url": "AIApiWrapper.styles.css"
     },
     {
@@ -433,7 +433,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-ufdLpxAXuMwjO3Lcn1To2Z\/S\/HI2U9oyqhZN\/27v\/ag=",
+      "hash": "sha256-2M9ctdQybb+5KiK6boT8huxRCtxP18pTZsiRVJFx8Co=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -445,11 +445,11 @@
       "url": "_framework\/dotnet.native.wasm"
     },
     {
-      "hash": "sha256-2rHWJigXji2Wts+izkbMrmwAzcCsHQo9MPtOhqqEpLE=",
+      "hash": "sha256-gZPt9b01rW2G\/w+3oyCzww0X5+PF6e69FoZG1vntbpU=",
       "url": "_framework\/AIApiWrapper.Configurations.wasm"
     },
     {
-      "hash": "sha256-pm41\/WdUXAKhXwbYiIrdR5WqwvFpKAIodlPZYTDL8ZA=",
+      "hash": "sha256-6IdGLT51RXtYXzuGLIy\/ps\/oLsGzE6dd+FOSBsqGrWA=",
       "url": "_framework\/AIApiWrapper.wasm"
     },
     {
@@ -461,7 +461,7 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.Forms.wasm"
     },
     {
-      "hash": "sha256-17K+Q16\/unzhoLbO437qx8XHHiqcFNRczkpHoNjgW1s=",
+      "hash": "sha256-15CQGAYCTxqmjYsyt+nOzA7+UnroZQLxRJoT\/8ZZ85w=",
       "url": "_framework\/Microsoft.AspNetCore.Components.wasm"
     },
     {
@@ -601,7 +601,7 @@
       "url": "_framework\/System.Memory.wasm"
     },
     {
-      "hash": "sha256-StR2TfYG+xB1BhOvPCnc5RwyPXyOMRM0zefcmhCZKyo=",
+      "hash": "sha256-f445sN09Z6GssGGPkNCg1ry+K2WX4wSVItz1pcQQq9A=",
       "url": "_framework\/System.Net.Http.wasm"
     },
     {
@@ -661,7 +661,7 @@
       "url": "_framework\/System.Runtime.Serialization.Primitives.wasm"
     },
     {
-      "hash": "sha256-rRrXNElu4kKtYlqrEGMHXriXDgipln85D6G9NOfe7mI=",
+      "hash": "sha256-hTS0vzi9pcxSqgu5WlDK5uP78zrftVVjZNV5vjE8B3g=",
       "url": "_framework\/System.Runtime.wasm"
     },
     {
@@ -717,5 +717,5 @@
       "url": "_content\/Habits.UIToolkit\/Habits.UIToolkit.bundle.scp.css"
     }
   ],
-  "version": "2t3UYWRK"
+  "version": "G\/KR2ERy"
 };

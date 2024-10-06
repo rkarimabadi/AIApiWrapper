@@ -300,14 +300,27 @@ main[b-cne94p2ktw] {
         right: 0.75rem;
         top: 0.5rem;
     }
-/* /Pages/TextToSpeachPage.razor.rz.scp.css */
-.text-box[b-1qm2hbj18w] {
-    flex-direction: column;
+/* /Pages/ChitChatBotPage.razor.rz.scp.css */
+.form-control[b-bxd7zrhdi7] {
+    border-radius: 10px;
+}
+.btn[b-bxd7zrhdi7] {
+    border-radius: 10px;
+}
+main[b-bxd7zrhdi7] {
+    padding-bottom: 5px !important;
+}
+[b-bxd7zrhdi7].card-body {
     display: flex;
-    flex-grow: 1;
-    overflow-y: auto;
-    border-radius:10px;
+    flex-direction: column;
 }
-.text-small[b-1qm2hbj18w] {
-    font-size: small;
-}
+
+    [b-bxd7zrhdi7].card-body > div:nth-child(odd) {
+        align-self: flex-start;
+    }
+
+    [b-bxd7zrhdi7].card-body > div:nth-child(even) {
+        align-self: flex-end;
+    }
+/* /Pages/TextToSpeachPage.razor.rz.scp.css */
+
