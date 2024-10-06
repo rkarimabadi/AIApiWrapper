@@ -20,6 +20,7 @@
     private string OutputString = string.Empty;
     private async Task SendPostRequest()
     {
+        if (string.IsNullOrWhiteSpace(InputString)) return;
         var settingsString = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "chitChatBotSetting");
         var payload = new ChitChatBotPayload
             {
