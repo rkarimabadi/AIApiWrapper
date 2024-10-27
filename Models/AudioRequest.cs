@@ -80,4 +80,40 @@ namespace AIApiWrapper.Models
         public string ShamsiDate { get; set; }
         public string RequestId { get; set; }
     }
+
+    public class TextToSpeechResponse
+    {
+        public TextToSpeechData Data { get; set; }
+        public TextToSpeechMeta Meta { get; set; }
+    }
+
+    public class TextToSpeechData
+    {
+        public ProcessData? Data { get; set; }
+        public string? Error { get; set; } // Assuming error can be null
+        public string Status { get; set; }
+    }
+
+    public class ProcessData
+    {
+        public string EstimatedProcessTime { get; set; }
+        public string Token { get; set; }
+    }
+
+    public class TextToSpeechMeta
+    {
+        public string RequestId { get; set; }
+        public string ShamsiDate { get; set; }
+    }
+
+    public class TextToSpeechTrackingResponse
+    {
+        public string Status { get; set; }
+        public TextToSpeechTrackingData? Data { get; set; }
+        public string? Error { get; set; }
+    }
+    public class TextToSpeechTrackingData
+    {
+        public string FilePath { get; set; }
+    }
 }

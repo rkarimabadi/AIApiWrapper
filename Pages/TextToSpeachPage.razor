@@ -58,6 +58,7 @@
     private string? statusMessage { get; set; }
     private bool flag = false;
     private SpeachResponse? speechResponse;
+    private TextToSpeechResponse? textToSpeechResponse;
     private async Task SubmitString()
     {
         flag = true;
@@ -88,6 +89,55 @@
             else
             {
                 statusMessage = "تبدیل متن به صدا نتیجه‌ای نداشت.";
+
+            }
+        }
+        else
+        {
+            var settingsString = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "textToSpeachSetting");
+            var payload = new SpeachRequestPayload
+                {
+                    Speaker = "3",
+                    Speed = "1"
+                };
+            if (!string.IsNullOrEmpty(settingsString))
+            {
+                payload = JsonConvert.DeserializeObject<SpeachRequestPayload>(settingsString);
+            }
+            payload!.Data = InputString ?? " ";
+            textToSpeechResponse = await audioService.SendLongInputStringAsync(payload!);
+            if (textToSpeechResponse.Data.Status == "success")
+            {
+                statusMessage = "درخواست تبدیل متن به صدا موفقیت آمیز بود.";
+                var temp = textToSpeechResponse.Data.Data.EstimatedProcessTime.Split(' ');
+                if(int.TryParse(temp[0], out int estimatedProcessTime))
+                {
+                    var audioFileLink = new TextToSpeechTrackingResponse();
+                    while (audioFileLink.Status != "success")
+                    {
+                        await Task.Delay(estimatedProcessTime);
+                        try
+                        {
+                            audioFileLink = await audioService.GetAudioFileLinkAsync(textToSpeechResponse.Data.Data.Token);
+                        } catch
+                        {
+                            audioFileLink = new TextToSpeechTrackingResponse { Status = "error" };
+                        }
+
+                    }
+                    if (audioFileLink.Status == "success")
+                    {
+                        speechResponse = new SpeachResponse { Data = new SpeachResponseData { Data = new SpeachInnerData { FilePath = $"partai.gw.isahab.ir/TextToSpeech/v1/{audioFileLink.Data.FilePath}" } } };
+                    }
+                    else
+                    {
+                        statusMessage = "درخواست تبدیل متن به صدا نتیجه‌ای نداشت.";
+                    }
+                }
+            }
+            else
+            {
+                statusMessage = "درخواست تبدیل متن به صدا نتیجه‌ای نداشت.";
 
             }
         }
