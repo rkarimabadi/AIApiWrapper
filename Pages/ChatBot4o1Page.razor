@@ -1,0 +1,44 @@
+﻿@page "/services/openai-4-o1-chat-bot"
+@using AIApiWrapper.Models
+@using AIApiWrapper.Services
+@using Newtonsoft.Json
+<PageTitle>ربات چت‌بات گفتگومحور</PageTitle>
+@inject ChatBot4o1Service chatBotService
+@inject IJSRuntime JSRuntime
+<HeadingComponent Icon="comment-discussion" class="my-3 shadow-sm">ربات چت‌بات گفتگومحور</HeadingComponent>
+<div class="card text-box mt-2" style="min-width: 18rem;">
+    <div class="card-body">@((MarkupString)OutputString)
+    </div>
+</div>
+<div class="input-group mt-3 mb-1">
+    <input type="text" class="form-control border-end-0" placeholder="پیام خود را در اینجا وارد کنید" @bind-value="InputString">
+    <button class="btn btn-primary" type="button" @onclick="SendPostRequest"><i class="codicon codicon-send me-2 vertical-center"></i>ارسال</button>
+</div>
+
+@code {
+    private string? InputString = string.Empty;
+    private string OutputString = string.Empty;
+    private async Task SendPostRequest()
+    {
+        if (string.IsNullOrWhiteSpace(InputString)) return;
+        var settingsString = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "chitChatBotSetting");
+        var payload = new ChatBot4o1Payload
+        {
+                Stream = false,
+                Model = "chatgpt-4o-latest",
+                Temperature = 0.5,
+                PresencePenalty = 0,
+                FrequencyPenalty = 0,
+                TopP = 1
+        };
+        if (!string.IsNullOrEmpty(settingsString))
+        {
+            payload = JsonConvert.DeserializeObject<ChatBot4o1Payload>(settingsString);
+        }
+        payload!.Messages = new List<Message> { new Message {  Role="user", Content = InputString ?? " "} } ;
+
+        var response = await chatBotService.SendInputStringAsync(payload);
+        OutputString = $"{OutputString} <div class=\"w-75 border rounded-pill px-3 py-2 bg-primary text-light mt-2\">{InputString}</div> <div class=\"w-75 border rounded-pill px-3 py-2 bg-info text-dark mt-2\"> {response?.Choices.First()!.Message.Content}</div>";
+        InputString = string.Empty;
+    }
+}
